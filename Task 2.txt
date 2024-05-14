@@ -1,0 +1,7 @@
+root@ip-172-31-32-49:/home/ubuntu# cd Task2
+root@ip-172-31-32-49:/home/ubuntu/Task2# ls
+root@ip-172-31-32-49:/home/ubuntu/Task2# touch Demo.txt
+root@ip-172-31-32-49:/home/ubuntu/Task2# chmod 764 Demo.txt
+root@ip-172-31-32-49:/home/ubuntu/Task2# ls -lt
+total 0
+-rwxrw-r-- 1 root root 0 May 14 13:37 Demo.txt
