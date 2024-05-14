@@ -1,0 +1,18 @@
+root@ip-172-31-32-49:/home/ubuntu/Batcg# touch Task{1..20}.txt
+root@ip-172-31-32-49:/home/ubuntu/Batcg# ls
+Task1.txt   Task11.txt  Task13.txt  Task15.txt  Task17.txt  Task19.txt  Task20.txt  Task4.txt  Task6.txt  Task8.txt
+Task10.txt  Task12.txt  Task14.txt  Task16.txt  Task18.txt  Task2.txt   Task3.txt   Task5.txt  Task7.txt  Task9.txt
+root@ip-172-31-32-49:/home/ubuntu/Batcg# mv Task1.txt Task1.yml
+root@ip-172-31-32-49:/home/ubuntu/Batcg# mv Task2.txt Task2.yml
+root@ip-172-31-32-49:/home/ubuntu/Batcg# mv Task3.txt Task3.yml
+root@ip-172-31-32-49:/home/ubuntu/Batcg# mv Task4.txt Task4.yml
+root@ip-172-31-32-49:/home/ubuntu/Batcg# mv Task5.txt Task5.yml
+root@ip-172-31-32-49:/home/ubuntu/Batcg# ls
+Task1.yml   Task11.txt  Task13.txt  Task15.txt  Task17.txt  Task19.txt  Task20.txt  Task4.yml  Task6.txt  Task8.txt
+Task10.txt  Task12.txt  Task14.txt  Task16.txt  Task18.txt  Task2.yml   Task3.yml   Task5.yml  Task7.txt  Task9.txt
+root@ip-172-31-32-49:/home/ubuntu/Batcg# ls -t|head -5
+Task17.txt
+Task18.txt
+Task19.txt
+Task20.txt
+Task1.yml
