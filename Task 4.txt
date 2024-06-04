@@ -1,0 +1,92 @@
+ubuntu@ip-172-31-32-49:~$ sudo apt install git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.43.0-1ubuntu7).
+git set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 6 not upgraded.
+ubuntu@ip-172-31-32-49:~$ ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_ed25519): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/ubuntu/.ssh/id_ed25519
+Your public key has been saved in /home/ubuntu/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:umRW5SBbZ1BJAfa/AobhT7SkPAJpulkWh9myJxX1pZE ubuntu@ip-172-31-32-49
+The key's randomart image is:
++--[ED25519 256]--+
+|    ... ===o     |
+|   = . oE*.      |
+|  O + o B =      |
+| o B o X B .     |
+|. = o B S . .    |
+| = o . B .   .   |
+|o     = . . .    |
+|     + .   .     |
+|      .          |
++----[SHA256]-----+
+ubuntu@ip-172-31-32-49:~$ ^C
+ubuntu@ip-172-31-32-49:~$ ^C
+ubuntu@ip-172-31-32-49:~$ cd /home/ubuntu/.ssh
+ubuntu@ip-172-31-32-49:~/.ssh$ ls
+authorized_keys  id_ed25519  id_ed25519.pub
+ubuntu@ip-172-31-32-49:~/.ssh$ cat id_ed55219.pub
+cat: id_ed55219.pub: No such file or directory
+ubuntu@ip-172-31-32-49:~/.ssh$ cat id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICQ8nIDvCr5v0PjI6dHq0lHJfMe8zhb92b86J/0DZEEn ubuntu@ip-172-31-32-49
+ubuntu@ip-172-31-32-49:~/.ssh$ cd ..
+ubuntu@ip-172-31-32-49:~$ git clone git@github.com:SowmiyaTP/Devops-Test.git
+Cloning into 'Devops-Test'...
+The authenticity of host 'github.com (140.82.114.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+warning: You appear to have cloned an empty repository.
+ubuntu@ip-172-31-32-49:~$ cd Devops-Test
+ubuntu@ip-172-31-32-49:~/Devops-Test$ touch Task
+ubuntu@ip-172-31-32-49:~/Devops-Test$ git add Task
+ubuntu@ip-172-31-32-49:~/Devops-Test$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Task
+
+ubuntu@ip-172-31-32-49:~/Devops-Test$ git config --global user.name"SowmiyaTP"
+ubuntu@ip-172-31-32-49:~/Devops-Test$ git config --global user.email"sowmiyatp@gmail.com"
+ubuntu@ip-172-31-32-49:~/Devops-Test$ git commit -m "Push it to the Local repo"
+[main (root-commit) 3238914] Push it to the Local repo
+ Committer: Ubuntu <ubuntu@ip-172-31-32-49.ec2.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Task
+ubuntu@ip-172-31-32-49:~/Devops-Test$ git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+ubuntu@ip-172-31-32-49:~/Devops-Test$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 227 bytes | 227.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:SowmiyaTP/Devops-Test.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+ubuntu@ip-172-31-32-49:~/Devops-Test$ 
