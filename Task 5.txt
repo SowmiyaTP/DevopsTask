@@ -1,0 +1,61 @@
+Task 1:
+Comments
+ubuntu@ip-172-31-32-49:~$ vi task5.sh
+ubuntu@ip-172-31-32-49:~$ chmod +x task5.sh
+ubuntu@ip-172-31-32-49:~$ ./task5.sh
+Enter the website to check the HTTP error code: https://www.guvi.in/
+./task5.sh: line 12: syntax error: unexpected end of file
+ubuntu@ip-172-31-32-49:~$ vi task5.sh
+ubuntu@ip-172-31-32-49:~$ ./task5.sh
+Enter the website to check the HTTP error code: https://www.guvi.in/
+./task5.sh: line 12: syntax error: unexpected end of file
+ubuntu@ip-172-31-32-49:~$ vi task5.sh
+ubuntu@ip-172-31-32-49:~$ ./task5.sh
+Enter the website to check the HTTP error code: https://www.guvi.in/
+The Response code of https://www.guvi.in/ is : 200
+connection is Success
+
+Shell Script:
+#!/bin/bash
+read -p "Enter the website to check the HTTP error code: " URL
+http_code=$(curl --write-out %{http_code} --silent --output /dev/null $URL)
+
+if [ $http_code -eq 200 ]; then
+        echo "The Response code of $URL is : $http_code"
+        echo "connection is Success"
+else
+        echo "The Response code of $URL is : $http_code"
+        echo "connection is Failure"
+fi
+
+Task 2:
+Comments:
+ubuntu@ip-172-31-32-49:~$ vi task5s.txt
+ubuntu@ip-172-31-32-49:~$ vi task51.sh
+ubuntu@ip-172-31-32-49:~$ ./ task51.sh
+-bash: ./: Is a directory
+ubuntu@ip-172-31-32-49:~$ ./task51.sh
+ubuntu@ip-172-31-32-49:~$ vi newsample123.txt
+ubuntu@ip-172-31-32-49:~$ vi task51.sh
+ubuntu@ip-172-31-32-49:~$ vi task5s.txt
+ubuntu@ip-172-31-32-49:~$ ./task51.sh
+ubuntu@ip-172-31-32-49:~$ vi newsample123.txt
+ubuntu@ip-172-31-32-49:~$ vi task5s.txt
+ubuntu@ip-172-31-32-49:~$ vi task51.sh
+ubuntu@ip-172-31-32-49:~$ ./task51.sh
+ubuntu@ip-172-31-32-49:~$ vi newsample123.txt
+ubuntu@ip-172-31-32-49:~$ 
+
+Shell Script:
+#!/bin/bash
+sed -e '/Welcome/{5,$s/give/learning/g}' task5s.txt > newsample123.txt
+
+Output:
+Welcome give 2
+Welcome to give 2
+Welcome to give 3
+Welcome to give 4
+Welcome to learning 5
+Welcome to learning 6
+Give welcome 7
+Give welcome 8
