@@ -1,0 +1,42 @@
+Syntax for while Loop:
+#/bin/bash
+while <condition>
+do
+    <command 1>
+    <command 2>
+    <etc>
+done
+
+Syntax for "for" Loop:
+#/bin/bash
+for <var> in <value1 value2 ... valuen>
+do
+    <command 1>
+    <command 2>
+    <etc>
+done
+
+Syntax "if and else" statement:
+#/bin/bash
+for <var> in <value1 value2 ... valuen>
+do
+if(condition)
+then
+echo "print the output"
+else
+echo "print the output"
+fi
+done
+
+#!/bin/bash
+for <var> in <value1 value2 ... valuen>
+do
+if(condition)
+then
+elif ( condition)
+then
+echo "print the output"
+else
+echo "print the output"
+fi
+done
